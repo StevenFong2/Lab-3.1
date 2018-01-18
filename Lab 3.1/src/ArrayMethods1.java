@@ -30,13 +30,13 @@ public class ArrayMethods1
 		int num = 0;
 		while (sortedintChecker(list1) == false)
 		{
-			int check = list1[num];
+			int min = list1[num];
 			int storei = 0;
 			for (int i = 0; i < list1.length; i++)
 			{
-				if (list1[i] < check)
+				if (list1[i] < min)
 				{
-					check = list1[i];
+					min = list1[i];
 					storei = i;
 				}
 			}
@@ -44,6 +44,12 @@ public class ArrayMethods1
 			num++;
 			count++;
 		}
+		/*int pos = 0;
+		int posi = 0;
+		for (int i = 0; i < list1.length; i++) 
+		{
+			list1[i];
+		}*/
 	}
 	
 	public static void selectionSort(double[] list1)
@@ -89,9 +95,9 @@ public class ArrayMethods1
 	public static boolean sortedintChecker(int[] list1)
 	{
 		int sum = 0;
-		for (int i = 0; i < list1.length; i++)
+		for (int i = 0; i < list1.length - 1; i++)
 		{
-			if (list1[i] < list1[i + 1])
+			if (list1[i] <= list1[i + 1])
 			{
 				sum++;
 			}
@@ -106,7 +112,7 @@ public class ArrayMethods1
 	public static boolean sorteddoubleChecker(double[] list1)
 	{
 		int sum = 0;
-		for (int i = 0; i < list1.length; i++)
+		for (int i = 0; i < list1.length - 1; i++)
 		{
 			if (list1[i] < list1[i + 1])
 			{
@@ -123,7 +129,7 @@ public class ArrayMethods1
 	public static boolean sortedstringChecker(String[] list1)
 	{
 		int sum = 0;
-		for (int i = 0; i < list1.length; i++)
+		for (int i = 0; i < list1.length - 1; i++)
 		{
 			if (list1[i].compareTo(list1[i + 1]) < 0)
 			{
