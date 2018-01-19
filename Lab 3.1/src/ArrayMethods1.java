@@ -26,30 +26,16 @@ public class ArrayMethods1
 	
 	public static void insertionSort(int[] list1)
 	{
-		int count = 0;
-		int num = 0;
-		while (sortedintChecker(list1) == false)
+		for (int i = 0; i < list1.length - 1; i++)
 		{
-			int min = list1[num];
-			int storei = 0;
-			for (int i = 0; i < list1.length; i++)
-			{
-				if (list1[i] < min)
+			for (int j = i + 1; j < list1.length; j++)
+			{	
+				if (list1[i] > list1[j])
 				{
-					min = list1[i];
-					storei = i;
+					swapint(list1, i, j);
 				}
 			}
-			swapint(list1, count, storei);
-			num++;
-			count++;
 		}
-		/*int pos = 0;
-		int posi = 0;
-		for (int i = 0; i < list1.length; i++) 
-		{
-			list1[i];
-		}*/
 	}
 	
 	public static void selectionSort(double[] list1)
@@ -78,68 +64,19 @@ public class ArrayMethods1
 	
 	public static void bubbleSort(String[] list1)
 	{
-		while (sortedstringChecker(list1) == false)
+		int length = list1.length;
+		while (length > 0)
 		{
-			int a = list1.length - 1;
-			for (int i = 0; i < a; i++)
+			int i = 0;
+			for (int j = i + 1; j < length; j++)
 			{
-				if (list1[i + 1].compareTo(list1[i]) < 0)
+				if (list1[i].compareTo(list1[j]) > 0)
 				{
-					swapstring(list1, i, i + 1);
+					swapstring(list1, j , i);
+					i = j;
 				}
 			}
-			a--;
+			length--;
 		}
-	}
-	
-	public static boolean sortedintChecker(int[] list1)
-	{
-		int sum = 0;
-		for (int i = 0; i < list1.length - 1; i++)
-		{
-			if (list1[i] <= list1[i + 1])
-			{
-				sum++;
-			}
-		}
-		if (sum == list1.length - 1)
-		{
-			return true;
-		}
-		return false;
-	}
-	
-	public static boolean sorteddoubleChecker(double[] list1)
-	{
-		int sum = 0;
-		for (int i = 0; i < list1.length - 1; i++)
-		{
-			if (list1[i] < list1[i + 1])
-			{
-				sum++;
-			}
-		}
-		if (sum == list1.length - 1)
-		{
-			return true;
-		}
-		return false;
-	}
-	
-	public static boolean sortedstringChecker(String[] list1)
-	{
-		int sum = 0;
-		for (int i = 0; i < list1.length - 1; i++)
-		{
-			if (list1[i].compareTo(list1[i + 1]) < 0)
-			{
-				sum++;
-			}
-		}
-		if (sum == list1.length - 1)
-		{
-			return true;
-		}
-		return false;
 	}
 }
