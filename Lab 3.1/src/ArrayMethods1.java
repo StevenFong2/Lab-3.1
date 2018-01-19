@@ -73,8 +73,8 @@ public class ArrayMethods1
 				if (list1[i].compareTo(list1[j]) > 0)
 				{
 					swapstring(list1, j , i);
-					i = j;
 				}
+				i = j;
 			}
 			length--;
 		}
