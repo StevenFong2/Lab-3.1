@@ -12,19 +12,19 @@ public class MainMethod
 		double [] test2 = {1.1, 4.1, 4.2, 5.0, 2.0, 4.0, 3.0, 17.0, 0.0};
 		String [] test3 = {"zebra", "tortilla", "abba", "foo", "bar", "aba"};
 		
-				long start = System.nanoTime();
-		ArrayMethods1.insertionSort(test1);
+		long start = System.nanoTime();
+		ArrayMethods1.insertionSort(test2);
 		long end = System.nanoTime();
 		long time = end - start;
 		System.out.println("Test1 took: " + time + "nanoseconds");
-		printintArray(test1);
+		printdoubleArray(test2);
 		
 		start = System.nanoTime();
-		ArrayMethods1.selectionSort(test2);
+		ArrayMethods1.selectionSort(test1);
 		end = System.nanoTime();
 		time = end - start;
 		System.out.println("Test2 took: " + time + "nanoseconds");
-		printdoubleArray(test2);
+		printintArray(test1);
 		
 		start = System.nanoTime();
 		ArrayMethods1.bubbleSort(test3);

@@ -24,7 +24,7 @@ public class ArrayMethods1
 	}
 	static int []ran = {1,8,9,4,20};
 	
-	public static void insertionSort(int[] list1)
+	public static void selectionSort(int[] list1)
 	{
 		for (int i = 0; i < list1.length - 1; i++)
 		{
@@ -38,7 +38,7 @@ public class ArrayMethods1
 		}
 	}
 	
-	public static void selectionSort(double[] list1)
+	public static void insertionSort(double[] list1)
 	{
 		for (int i = 0; i < list1.length - 1; i++)
 		{
