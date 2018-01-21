@@ -13,29 +13,29 @@ public class MainMethod
 		String [] test3 = {"zebra", "tortilla", "abba", "foo", "bar", "aba"};
 		
 		long start = System.nanoTime();
-		ArrayMethods1.insertionSort(test2);
+		ArrayMethods1.insertionSort(test1);
 		long end = System.nanoTime();
 		long time = end - start;
 		System.out.println("Test1 took: " + time + "nanoseconds");
-		printdoubleArray(test2);
+		printArray(test1);
 		//flipped insertion and selection.. oppss
 		start = System.nanoTime();
-		ArrayMethods1.selectionSort(test1);
+		ArrayMethods1.selectionSort(test2);
 		end = System.nanoTime();
 		time = end - start;
 		System.out.println("Test2 took: " + time + "nanoseconds");
-		printintArray(test1);
+		printArray(test2);
 		
 		start = System.nanoTime();
 		ArrayMethods1.bubbleSort(test3);
 		end = System.nanoTime();
 		time = end - start;
 		System.out.println("Test3 took: " + time + "nanoseconds");
-		printstringArray(test3);
+		printArray(test3);
 
 	}
 	
-	public static void printintArray(int[] arr)
+	public static void printArray(int[] arr)
 	{
 		for (int i = 0; i < arr.length; i++)
 		{
@@ -43,7 +43,7 @@ public class MainMethod
 		}
 	}
 	
-	public static void printdoubleArray(double[] arr)
+	public static void printArray(double[] arr)
 	{
 		for (int i = 0; i < arr.length; i++)
 		{
@@ -51,7 +51,7 @@ public class MainMethod
 		}
 	}
 	
-	public static void printstringArray(String[] arr)
+	public static void printArray(String[] arr)
 	{
 		for (int i = 0; i < arr.length; i++)
 		{
