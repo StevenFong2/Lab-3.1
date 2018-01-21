@@ -18,7 +18,7 @@ public class MainMethod
 		long time = end - start;
 		System.out.println("Test1 took: " + time + "nanoseconds");
 		printArray(test1);
-		//flipped insertion and selection.. oppss
+		
 		start = System.nanoTime();
 		ArrayMethods1.selectionSort(test2);
 		end = System.nanoTime();

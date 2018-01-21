@@ -36,6 +36,21 @@ public class ArrayMethods1
 				}
 			}
 		}
+		
+		//Another way?
+		
+		/*for (int i = 0; i < list1.length - 1; i++)
+		{
+			int m = i;
+			for (int j = i + 1; j < list1.length; j++)
+			{
+				if (list1[m] > list1[j])
+				{
+					m = j;
+				}
+			}
+			swap(list1, i, m);
+		}*/
 	}
 	
 	public static void insertionSort(int[] list1)
