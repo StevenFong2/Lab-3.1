@@ -53,33 +53,63 @@ public class ArrayMethods1
 		}*/
 	}
 	
-	public static void insertionSort(int[] list1)
+	public static void selectionSort(int[] list1)
 	{
 		for (int i = 0; i < list1.length - 1; i++)
 		{
-			if (list1[i + 1] < list1[i])
-			{
-				swap(list1, i, i + 1);
-				int j = i;
-				while (j > 0)
+			for (int j = i + 1; j < list1.length; j++)
+			{	
+				if (list1[i] > list1[j])
 				{
-					if (list1[j] < list1[j - 1])
-					{
-						swap(list1, j, j - 1);
-					}
-					else
-					{
-						break;
-					}
-					j--;
+					swap(list1, i, j);
 				}
+			}
+		}
+	}
+	
+	public static void insertionSort(int[] list1)
+	{
+		for (int i = 1; i < list1.length; i++)
+		{
+			int j = i;
+			while (j > 0)
+			{
+				if (list1[j] < list1[j - 1])
+				{
+					swap(list1, j, j - 1);
+				}
+				else
+				{
+					break;
+				}
+				j--;
+			}
+		}
+	}
+	
+	public static void insertionSort(double[] list1)
+	{
+		for (int i = 1; i < list1.length; i++)
+		{
+			int j = i;
+			while (j > 0)
+			{
+				if (list1[j] < list1[j - 1])
+				{
+					swap(list1, j, j - 1);
+				}
+				else
+				{
+					break;
+				}
+				j--;
 			}
 		}
 	}
 	
 	public static void bubbleSort(String[] list1)
 	{
-		int length = list1.length;
+		/*int length = list1.length;
 		while (length > 0)
 		{
 			int i = 0;
@@ -90,6 +120,22 @@ public class ArrayMethods1
 					swap(list1, j , i);
 				}
 				i = j;
+			}
+			length--;
+		}*/
+		
+		int swap = 1;
+		int length = list1.length - 1;
+		while (swap != 0)
+		{
+			swap = 0;
+			for (int i = 0; i < length; i++)
+			{
+				if (list1[i].compareTo(list1[i + 1]) > 0)
+				{
+					swap(list1, i, i + 1);
+					swap++;
+				}
 			}
 			length--;
 		}
