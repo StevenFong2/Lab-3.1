@@ -20,20 +20,6 @@ public class MainMethod
 		printArray(test1);
 		
 		start = System.nanoTime();
-		ArrayMethods1.insertionSort(test2);
-		end = System.nanoTime();
-		time = end - start;
-		System.out.println("Test2 took: " + time + "nanoseconds");
-		printArray(test2);
-		
-		start = System.nanoTime();
-		ArrayMethods1.selectionSort(test1);
-		end = System.nanoTime();
-		time = end - start;
-		System.out.println("Test2 took: " + time + "nanoseconds");
-		printArray(test1);
-		
-		start = System.nanoTime();
 		ArrayMethods1.selectionSort(test2);
 		end = System.nanoTime();
 		time = end - start;
