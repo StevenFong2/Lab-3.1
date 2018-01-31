@@ -26,7 +26,7 @@ public class ArrayMethods1
 	
 	public static void selectionSort(double[] list1)
 	{
-		for (int i = 0; i < list1.length - 1; i++)
+		/*for (int i = 0; i < list1.length - 1; i++)
 		{
 			for (int j = i + 1; j < list1.length; j++)
 			{	
@@ -35,11 +35,11 @@ public class ArrayMethods1
 					swap(list1, i, j);
 				}
 			}
-		}
+		}*/
 		
 		//Another way?
 		
-		/*for (int i = 0; i < list1.length - 1; i++)
+		for (int i = 0; i < list1.length - 1; i++)
 		{
 			int m = i;
 			for (int j = i + 1; j < list1.length; j++)
@@ -50,7 +50,7 @@ public class ArrayMethods1
 				}
 			}
 			swap(list1, i, m);
-		}*/
+		}
 	}
 	
 	public static void insertionSort(int[] list1)
